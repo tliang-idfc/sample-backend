@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="SSORestTestApp" version="3.0">
+	<display-name>Test Web Application for SSO/Rest</display-name>
+
+
+	<!-- Context parameters for echoheaders.jsp -->
+	<context-param>
+		<param-name>userIdHeaderName</param-name>
+		<param-value>SMUSER</param-value>
+	</context-param>
+	<context-param>
+		<param-name>sessionIdHeaderName</param-name>
+		<param-value>SMSERVERSESSIONID</param-value>
+	</context-param>
+	<context-param>
+		<param-name>legacyHeaderNames</param-name>
+		<param-value>false</param-value>
+	</context-param>
+	<context-param>
+		<param-name>com.idfconnect.ssorest.plugin.filter.SSORestServletFilterPluginAnnotated.useFileConfigProvider</param-name>
+		<param-value>true</param-value>
+	</context-param>
+	<context-param>
+		<param-name>com.idfconnect.ssorest.plugin.filter.SSORestServletFilterPluginAnnotated.configFileName</param-name>
+		<param-value>D:/IDFC/SSORest-3.1-casso/conf/filter.properties</param-value>
+	</context-param>
+
+	<listener>
+		<listener-class>ch.qos.logback.classic.selector.servlet.ContextDetachingSCL</listener-class>
+	</listener>
+
+	<!-- Welcome files -->
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

@@ -1,1 +1,23 @@
-# sample-backend
+## config properties
+
+sendRequestHeaders=x-requested-with
+sendRequestHeaders=origin
+
+oauth.accessTokenUrl=http://idfcdev2.sand.idfconnect.lan:8280/ssorest/service/oauth/validate
+oauth.clientId=clientapp
+oauth.clientSecret=secret
+
+AccessControlMaxAge=-1
+AccessControlAllowCredentials=true
+AccessControlAllowHeaders=x-requested-with
+AccessControlAllowHeaders=origin
+AccessControlAllowHeaders=content-type
+AccessControlAllowHeaders=accept
+AccessControlAllowHeaders=authorization
+AccessControlAllowOrigin=http://idfcdev1.sand.idfconnect.lan:4200
+AccessControlAllowMethods=OPTIONS
+AccessControlAllowMethods=GET
+AccessControlAllowMethods=PUT
+AccessControlAllowMethods=POST
+AccessControlAllowMethods=DELETE
+AccessControlAllowMethods=HEAD
